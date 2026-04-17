@@ -1,0 +1,3 @@
+2026-04-17 11:35:47,710 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-17 11:35:47,710 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好

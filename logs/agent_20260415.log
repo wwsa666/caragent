@@ -1,0 +1,39 @@
+2026-04-15 18:08:23,322 - agent - DEBUG - logger_handler.py:50 - 调试信息
+2026-04-15 18:08:23,322 - agent - WARNING - logger_handler.py:51 - 警告信息
+2026-04-15 18:08:23,322 - agent - ERROR - logger_handler.py:52 - 错误信息
+2026-04-15 22:20:16,138 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf加载失败: Logger.error() missing 1 required positional argument: 'msg'
+Traceback (most recent call last):
+  File "D:\PythonProject\Rag\Agent项目\rag\vector_store.py", line 95, in load_document
+    logger.error()
+TypeError: Logger.error() missing 1 required positional argument: 'msg'
+2026-04-15 22:20:16,775 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt加载失败: Logger.error() missing 1 required positional argument: 'msg'
+Traceback (most recent call last):
+  File "D:\PythonProject\Rag\Agent项目\rag\vector_store.py", line 95, in load_document
+    logger.error()
+TypeError: Logger.error() missing 1 required positional argument: 'msg'
+2026-04-15 22:20:17,354 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt加载失败: Logger.error() missing 1 required positional argument: 'msg'
+Traceback (most recent call last):
+  File "D:\PythonProject\Rag\Agent项目\rag\vector_store.py", line 95, in load_document
+    logger.error()
+TypeError: Logger.error() missing 1 required positional argument: 'msg'
+2026-04-15 22:20:17,979 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt加载失败: Logger.error() missing 1 required positional argument: 'msg'
+Traceback (most recent call last):
+  File "D:\PythonProject\Rag\Agent项目\rag\vector_store.py", line 95, in load_document
+    logger.error()
+TypeError: Logger.error() missing 1 required positional argument: 'msg'
+2026-04-15 22:20:18,441 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt加载失败: Logger.error() missing 1 required positional argument: 'msg'
+Traceback (most recent call last):
+  File "D:\PythonProject\Rag\Agent项目\rag\vector_store.py", line 95, in load_document
+    logger.error()
+TypeError: Logger.error() missing 1 required positional argument: 'msg'
+2026-04-15 22:20:18,920 - agent - ERROR - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt加载失败: Logger.error() missing 1 required positional argument: 'msg'
+Traceback (most recent call last):
+  File "D:\PythonProject\Rag\Agent项目\rag\vector_store.py", line 95, in load_document
+    logger.error()
+TypeError: Logger.error() missing 1 required positional argument: 'msg'
+2026-04-15 22:21:18,532 - agent - INFO - vector_store.py:74 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf内容已经存在知识库内，跳过
+2026-04-15 22:21:18,533 - agent - INFO - vector_store.py:74 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt内容已经存在知识库内，跳过
+2026-04-15 22:21:18,533 - agent - INFO - vector_store.py:74 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt内容已经存在知识库内，跳过
+2026-04-15 22:21:18,533 - agent - INFO - vector_store.py:74 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-15 22:21:18,533 - agent - INFO - vector_store.py:74 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-15 22:21:18,534 - agent - INFO - vector_store.py:74 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt内容已经存在知识库内，跳过

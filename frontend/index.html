@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智行新能源车服 AI 管家</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Elements -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar glass-panel">
+            <div class="brand">
+                <i class="fa-solid fa-car-side brand-icon"></i>
+                <h1 class="brand-text">智行车服</h1>
+            </div>
+            
+            <div class="new-chat-btn-container">
+                <button id="new-chat-btn" class="primary-btn">
+                    <i class="fa-solid fa-plus"></i> 新建对话
+                </button>
+            </div>
+            
+            <div class="recent-chats">
+                <h3 class="menu-title">最近对话</h3>
+                <ul class="chat-history-list" id="chat-history-list">
+                    <!-- History items will be dynamically injected here -->
+                </ul>
+            </div>
+            
+            <div class="user-profile">
+                <!-- Dropdown Container -->
+                <div class="avatar-dropdown-container" style="position: relative;">
+                    <div class="avatar" id="user-profile-btn" style="cursor: pointer; transition: all 0.3s;" title="点击切换当前绑定的车辆VIN">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                    </div>
+                    <!-- The Dropdown List -->
+                    <div class="vin-dropdown glass-panel" id="vin-dropdown" style="display: none;">
+                        <ul class="vin-list" id="vin-list">
+                            <!-- JS populates list here -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="user-info">
+                    <span class="user-name" id="current-username">VIN1001 车主</span>
+                    <span class="user-status">云端已连接</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Header -->
+            <header class="chat-header glass-panel">
+                <div class="header-info">
+                    <h2>AI 管家对话中</h2>
+                    <span class="status-indicator">● 在线服务</span>
+                </div>
+            </header>
+
+            <!-- Chat Container -->
+            <div id="chat-container" class="chat-container">
+                <!-- Welcome Message -->
+                <div class="message assistant-message entrance-anim">
+                    <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="msg-content glass-bubble">
+                        <p>您好！我是您的**智能新能源车服 AI 管家**。</p>
+                        <p>当前后台已成功连接您的爱车数据系统系统，我可以帮您：</p>
+                        <ul>
+                            <li>查询不同天气下的最新电池保养指南</li>
+                            <li>解读车辆仪表盘各类异常警报</li>
+                            <li>一键生成车辆的**月度运行总结与电耗击败率报告**</li>
+                        </ul>
+                        <p>请问今天有什么可以帮您的？您可以尝试回复："*我是VIN1001车主，帮我查一下我2月的运行报告并给出保养建议*"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area-wrapper">
+                <div class="input-glass-container">
+                    <textarea id="chat-input" placeholder="输入你想查询的车辆问题或指令..." rows="1"></textarea>
+                    <button id="send-btn" class="send-btn"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+                <div class="input-footer">
+                    <span>AI 管家可能会发生车况“幻觉”，紧急故障请拨打 400 救援电话</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+2026-04-16 12:46:19,925 - agent - WARNING - agent_tools.py:104 - [fetch_external_data]未能检索到用户：111在2025-01的使用记录数据
+2026-04-16 16:03:27,785 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 16:03:27,786 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 16:03:29,154 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 16:03:29,154 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 16:03:29,155 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 16:03:29,156 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 16:03:29,156 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 深圳
+2026-04-16 16:03:29,156 - agent - ERROR - prompt_loader.py:42 - [load_report_prompts]解析系统提示词出错, [Errno 2] No such file or directory: 'D:\\PythonProject\\Rag\\Agent项目\\prompts/report.txt'
+2026-04-16 16:05:19,535 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 16:05:19,535 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 16:05:22,428 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 16:05:22,428 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 16:05:22,428 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 16:05:22,428 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 16:05:22,428 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 深圳
+2026-04-16 16:05:23,485 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_weather
+2026-04-16 16:05:23,485 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'city': '深圳'}
+2026-04-16 16:05:23,486 - agent - INFO - middleware.py:26 - [tool monitor]工具get_weather调用成功
+2026-04-16 16:05:23,486 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 16:05:23,486 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市深圳天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-16 16:05:26,135 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 16:05:26,135 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人在高温干燥环境下如何保养'}
+2026-04-16 16:05:27,347 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 16:05:27,348 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 16:05:27,348 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 在高温干燥环境下，应避免将扫地机器人长时间暴露于直射阳光下或高温环境中，保持设备通风良好，定期清理滤网和传感器以防止灰尘堆积影响性能，建议在温度适宜的时段使用并存放于阴凉处，以延长使用寿命。
+2026-04-16 16:06:38,935 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf内容已经存在知识库内，跳过
+2026-04-16 16:06:38,935 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt内容已经存在知识库内，跳过
+2026-04-16 16:06:38,935 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt内容已经存在知识库内，跳过
+2026-04-16 16:06:38,935 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-16 16:06:38,935 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-16 16:06:38,935 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-16 16:11:46,785 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 16:11:46,785 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 16:11:48,655 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 16:11:48,655 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 16:11:48,655 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 16:11:48,655 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 16:11:48,655 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 深圳
+2026-04-16 16:11:50,962 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_weather
+2026-04-16 16:11:50,962 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'city': '深圳'}
+2026-04-16 16:11:50,963 - agent - INFO - middleware.py:26 - [tool monitor]工具get_weather调用成功
+2026-04-16 16:11:50,963 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 16:11:50,964 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市深圳天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-16 16:11:54,499 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 16:11:54,500 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人在温暖潮湿环境下保养建议'}
+2026-04-16 16:11:55,712 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 16:11:55,712 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 16:11:55,712 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 在温暖潮湿环境下，应定期清洁扫地机器人的传感器和滚刷，避免灰尘和湿气积聚；保持设备通风干燥，避免长时间放置于高湿度区域；建议定期检查并更换滤网，防止霉菌滋生；使用后及时关闭电源并存放于干燥处，以延长使用寿命。
+2026-04-16 16:20:47,924 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf内容已经存在知识库内，跳过
+2026-04-16 16:20:47,924 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt内容已经存在知识库内，跳过
+2026-04-16 16:20:47,924 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt内容已经存在知识库内，跳过
+2026-04-16 16:20:47,924 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-16 16:20:47,924 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-16 16:20:47,924 - agent - INFO - vector_store.py:76 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-16 16:23:33,169 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 16:23:33,174 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 16:24:06,139 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 16:24:06,139 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 16:24:07,506 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 16:24:07,506 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 16:24:07,506 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 16:24:07,506 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 16:24:07,506 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 杭州
+2026-04-16 16:24:08,640 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_weather
+2026-04-16 16:24:08,640 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'city': '杭州'}
+2026-04-16 16:24:08,640 - agent - INFO - middleware.py:26 - [tool monitor]工具get_weather调用成功
+2026-04-16 16:24:08,640 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 16:24:08,640 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-16 16:24:10,680 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 16:24:10,680 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '高温干燥地区扫地机器人保养建议'}
+2026-04-16 16:24:11,848 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 16:24:11,848 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 16:24:11,848 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 定期清理扫地机器人滤网和滚刷，避免灰尘堆积影响性能；存放时避免高温直射，保持设备干燥以防元件受损；建议在干燥环境下使用并及时清洁，防止湿气导致电路故障。
+2026-04-16 16:33:16,461 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 16:33:16,461 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 16:33:19,504 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 16:33:19,504 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 16:33:19,504 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 16:33:19,504 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 16:33:19,504 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 杭州
+2026-04-16 16:33:21,683 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_weather
+2026-04-16 16:33:21,683 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'city': '杭州'}
+2026-04-16 16:33:21,683 - agent - INFO - middleware.py:26 - [tool monitor]工具get_weather调用成功
+2026-04-16 16:33:21,683 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 16:33:21,683 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-16 16:33:25,062 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 16:33:25,062 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人在25-30摄氏度气温和中等湿度环境下的保养建议'}
+2026-04-16 16:33:27,162 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 16:33:27,162 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 16:33:27,162 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人在25-30摄氏度气温和中等湿度环境下的具体保养建议。
+2026-04-16 16:33:29,528 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 16:33:29,528 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人日常保养和维护建议'}
+2026-04-16 16:33:31,560 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 16:33:31,560 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有9条消息。
+2026-04-16 16:33:31,561 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 严格遵守参考资料约束，仅基于所提供资料作答。由于参考资料中未包含关于扫地机器人日常保养和维护的具体建议内容，无法生成有效回答。
+2026-04-16 16:33:33,231 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_id
+2026-04-16 16:33:33,231 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 16:33:33,231 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_id调用成功
+2026-04-16 16:33:33,232 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有11条消息。
+2026-04-16 16:33:33,232 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 1010
+2026-04-16 16:33:34,533 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_current_month
+2026-04-16 16:33:34,534 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 16:33:34,534 - agent - INFO - middleware.py:26 - [tool monitor]工具get_current_month调用成功
+2026-04-16 16:33:34,534 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有13条消息。
+2026-04-16 16:33:34,535 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 2025-12
+2026-04-16 16:33:36,352 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: fetch_external_data
+2026-04-16 16:33:36,353 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'user_id': '1010', 'month': '2025-12'}
+2026-04-16 16:33:36,353 - agent - INFO - middleware.py:26 - [tool monitor]工具fetch_external_data调用成功
+2026-04-16 16:33:36,353 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有15条消息。
+2026-04-16 16:33:36,353 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {"特征": "130㎡四居 | 三代同堂 | 通体砖", "效率": "覆盖率:90%\\n手动辅助清扫:0次/天\\n定时清扫使用率:90%", "耗材": "电池衰减:20%\\n边刷寿命:剩余15天", "对比": "大户型中操作便捷性优于同类20%"}
+2026-04-16 16:33:38,675 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 16:33:38,675 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人电池保养和边刷更换建议'}
+2026-04-16 16:33:40,481 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 16:33:40,481 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有17条消息。
+2026-04-16 16:33:40,481 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人电池保养和边刷更换的具体建议。
+2026-04-16 17:00:19,621 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf内容已经存在知识库内，跳过
+2026-04-16 17:00:19,621 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt内容已经存在知识库内，跳过
+2026-04-16 17:00:19,621 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt内容已经存在知识库内，跳过
+2026-04-16 17:00:19,621 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-16 17:00:19,621 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-16 17:00:19,621 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-16 17:06:25,701 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf内容已经存在知识库内，跳过
+2026-04-16 17:06:25,701 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt内容已经存在知识库内，跳过
+2026-04-16 17:06:25,701 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt内容已经存在知识库内，跳过
+2026-04-16 17:06:25,701 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-16 17:06:25,701 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-16 17:06:25,701 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:07,910 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf内容已经存在知识库内，跳过
+2026-04-16 17:07:07,910 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:07,910 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:07,910 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:07,910 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:07,910 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:36,581 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf内容已经存在知识库内，跳过
+2026-04-16 17:07:36,581 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:36,581 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:36,581 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:36,581 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-16 17:07:36,590 - agent - INFO - vector_store.py:77 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-16 17:08:46,913 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问.pdf 内容加载成功
+2026-04-16 17:08:47,415 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫地机器人20问2.txt 内容加载成功
+2026-04-16 17:08:47,900 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\扫拖一体机器人15问.txt 内容加载成功
+2026-04-16 17:08:48,500 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\故障排除.txt 内容加载成功
+2026-04-16 17:08:48,940 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\维护保养.txt 内容加载成功
+2026-04-16 17:08:49,390 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\选购指南.txt 内容加载成功
+2026-04-16 17:09:40,905 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 17:09:40,905 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 17:09:43,663 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 17:09:43,663 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 17:09:43,663 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 17:09:43,663 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 17:09:43,663 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 合肥
+2026-04-16 17:09:45,598 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_weather
+2026-04-16 17:09:45,598 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'city': '合肥'}
+2026-04-16 17:09:45,598 - agent - INFO - middleware.py:26 - [tool monitor]工具get_weather调用成功
+2026-04-16 17:09:45,600 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 17:09:45,600 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市合肥天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-16 17:09:48,950 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:09:48,950 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人在25-30摄氏度温度和50%左右湿度环境下的保养建议'}
+2026-04-16 17:09:53,161 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:09:53,161 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 17:09:53,161 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 在25-30摄氏度、湿度约50%的环境下，扫地机器人应每周清空并冲洗尘盒（不可洗滤网部分），清理主刷和边刷缠绕物，擦拭底部轮子、悬崖传感器及充电触点；避免用水直接冲洗主机，仅可擦拭；建议使用原厂耗材，并定期通过App关注耗材寿命提醒。若环境灰尘较大，每6个月需送售后专业清洗内部电机和电路。
+2026-04-16 17:36:25,848 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 17:36:25,848 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 17:36:29,408 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 17:36:29,408 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 17:36:29,408 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 17:36:29,408 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 17:36:29,408 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 深圳
+2026-04-16 17:36:31,830 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_weather
+2026-04-16 17:36:31,830 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'city': '深圳'}
+2026-04-16 17:36:31,830 - agent - INFO - middleware.py:26 - [tool monitor]工具get_weather调用成功
+2026-04-16 17:36:31,830 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 17:36:31,830 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市深圳天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-16 17:36:34,895 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:36:34,895 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人高温高湿环境保养'}
+2026-04-16 17:36:36,495 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:36:36,495 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 17:36:36,495 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人在高温高湿环境下的具体保养方法。
+2026-04-16 17:36:38,584 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:36:38,584 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人保养建议'}
+2026-04-16 17:36:43,130 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:36:43,130 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有9条消息。
+2026-04-16 17:36:43,130 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 扫地机器人保养建议包括：每周清空并冲洗尘盒（滤网不可水洗）、清理主刷和边刷缠绕物、擦拭底部轮子、悬崖传感器及充电触点；避免用水直接冲洗主机，仅可擦拭；宠物家庭建议每周额外清洁主刷和滤网；使用原厂耗材；记录保养日期并关注App耗材寿命提醒；每半年或一年进行深度维护，包括清洁内部风道、升级固件，灰尘大的环境建议每6个月送售后专业清洗电机和电路。
+2026-04-16 17:42:25,842 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 17:42:25,844 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 你是谁
+2026-04-16 17:42:45,081 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 17:42:45,082 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 扫地机器人在我所在的地区的气温下如何保养
+2026-04-16 17:42:49,723 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_location
+2026-04-16 17:42:49,723 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 17:42:49,724 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_location调用成功
+2026-04-16 17:42:49,764 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 17:42:49,764 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 杭州
+2026-04-16 17:42:52,481 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_weather
+2026-04-16 17:42:52,481 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'city': '杭州'}
+2026-04-16 17:42:52,482 - agent - INFO - middleware.py:26 - [tool monitor]工具get_weather调用成功
+2026-04-16 17:42:53,210 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 17:42:53,210 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 城市杭州天气为晴天，气温26摄氏度，空气湿度50%，南风1级，AQI21，最近6小时降雨概率极低
+2026-04-16 17:42:57,871 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:42:57,871 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人在25-30摄氏度温度和中等湿度环境下的保养建议'}
+2026-04-16 17:43:02,960 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:43:05,971 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 17:43:05,971 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 在25-30摄氏度温度和中等湿度环境下，扫地机器人的保养建议包括：每周清空并冲洗尘盒（不可洗滤网部分）、清理主刷和边刷缠绕物、擦拭底部轮子、悬崖传感器及充电触点；每半年或一年进行深度维护，如清洁内部风道、升级固件，若环境灰尘大则每6个月送售后专业清洗内部电机和电路；若长时间不用，应保持电量30%-50%，关闭电源置于阴凉干燥处，并每3个月充放电一次。
+2026-04-16 17:43:47,753 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 17:43:47,754 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 生成使用报告
+2026-04-16 17:43:52,171 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_id
+2026-04-16 17:43:52,171 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 17:43:52,172 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_id调用成功
+2026-04-16 17:43:52,253 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 17:43:52,253 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 1005
+2026-04-16 17:43:54,686 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_current_month
+2026-04-16 17:43:54,686 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 17:43:54,687 - agent - INFO - middleware.py:26 - [tool monitor]工具get_current_month调用成功
+2026-04-16 17:43:54,811 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 17:43:54,812 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 2025-07
+2026-04-16 17:43:58,537 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: fetch_external_data
+2026-04-16 17:43:58,537 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'user_id': '1005', 'month': '2025-07'}
+2026-04-16 17:43:58,538 - agent - INFO - middleware.py:26 - [tool monitor]工具fetch_external_data调用成功
+2026-04-16 17:44:00,399 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 17:44:00,400 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {"特征": "120㎡ | 老人 | 防滑砖", "效率": "手动操作占比:96%\\n定时清扫未使用（操作遗忘）", "耗材": "电池衰减:26%\\n水箱未激活", "对比": "需重新指导语音控制功能使用"}
+2026-04-16 17:44:04,634 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:44:04,634 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人电池衰减保养建议'}
+2026-04-16 17:44:06,022 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:44:06,464 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有9条消息。
+2026-04-16 17:44:06,464 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人电池衰减的具体保养建议。
+2026-04-16 17:44:10,490 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:44:10,490 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人老人使用指南和语音控制功能'}
+2026-04-16 17:44:13,471 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:44:15,380 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有11条消息。
+2026-04-16 17:44:15,381 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 扫地机器人支持语音控制，兼容小爱同学、天猫精灵、小度、Siri等语音助手，需先绑定对应App，可通过语音指令如“开始清扫”“回家充电”进行操作。老人使用时，建议首次使用手动辅助建图、连接App并升级固件，确保操作简便和功能正常。
+2026-04-16 17:44:17,735 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:44:17,735 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人定时清扫功能设置方法'}
+2026-04-16 17:44:19,119 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:44:19,501 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有13条消息。
+2026-04-16 17:44:19,501 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提及扫地机器人定时清扫功能的具体设置方法。
+2026-04-16 17:44:21,871 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:44:21,871 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '扫地机器人水箱使用和维护'}
+2026-04-16 17:44:26,167 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:44:28,075 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有15条消息。
+2026-04-16 17:44:28,076 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 扫地机器人水箱使用和维护需注意：根据户型选择合适容量（小户型约200ml，大户型清水箱≥300ml、污水箱≥250ml）；避免过度加水；定期清洗水箱防止堵塞；检查密封圈是否老化；确保水箱正确安装以防漏水。拖布材质可选普通纤维、超细纤维或魔术贴等，按需更换。
+2026-04-16 17:44:30,632 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 17:44:30,632 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '锂电池保养方法'}
+2026-04-16 17:44:33,245 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 17:44:33,892 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有17条消息。
+2026-04-16 17:44:33,892 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 锂电池长期不用时应保持电量在30%-50%，并每3个月进行一次充放电，以防止深度放电。
+2026-04-16 22:42:06,058 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 22:42:06,059 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 你是谁
+2026-04-16 22:49:39,382 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 22:49:39,382 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 你是谁
+2026-04-16 22:55:41,067 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 22:55:41,068 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 你好
+2026-04-16 22:59:01,304 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 22:59:01,304 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 你好
+2026-04-16 23:03:02,312 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:03:02,312 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 你好
+2026-04-16 23:05:36,663 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:05:36,663 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | 你好
+2026-04-16 23:15:02,499 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:15:02,500 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1010）
+我是VIN1010车主，帮我查一下我2月的运行报告并给出保养建议
+2026-04-16 23:15:05,381 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: fill_context_for_report
+2026-04-16 23:15:05,381 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 23:15:05,382 - agent - INFO - middleware.py:26 - [tool monitor]工具fill_context_for_report调用成功
+2026-04-16 23:15:05,383 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 23:15:05,383 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | fill_context_for_report已调用
+2026-04-16 23:15:07,169 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: fetch_external_data
+2026-04-16 23:15:07,169 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'user_id': 'VIN1010', 'month': '2025-02'}
+2026-04-16 23:15:07,171 - agent - INFO - middleware.py:26 - [tool monitor]工具fetch_external_data调用成功
+2026-04-16 23:15:07,172 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 23:15:07,172 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {'驾驶偏好': '舒适为主（常开大功率空调）', '百公里电耗': '18.2 kWh/100km', '电池健康度(SOH)': 'SOH当前为98.4%', '能耗击败率': '能耗处于全国平均水平'}
+2026-04-16 23:15:09,437 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 23:15:09,438 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '新能源汽车冬季高电耗原因及电池保养建议'}
+2026-04-16 23:15:12,819 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 23:15:12,820 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 23:15:12,820 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 新能源汽车冬季高电耗主要因低温导致电池活性下降、续航缩水，同时空调制热等用电需求增加。电池保养建议包括：尽量将车辆停放在室内或地下车库以减少低温影响；出行前可提前预热电池；避免长时间暴露在极寒环境中；定期检查电池状态并保持合理充电习惯。
+2026-04-16 23:18:43,358 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:18:43,359 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好
+2026-04-16 23:18:50,425 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:18:50,426 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你是谁
+2026-04-16 23:19:15,316 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:19:15,317 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+我是VIN1001车主，帮我查一下我2月的运行报告并给出保养建议
+2026-04-16 23:19:20,083 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: get_user_id
+2026-04-16 23:19:20,083 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {}
+2026-04-16 23:19:20,084 - agent - INFO - middleware.py:26 - [tool monitor]工具get_user_id调用成功
+2026-04-16 23:19:20,085 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 23:19:20,085 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | VIN1003
+2026-04-16 23:19:24,289 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: fetch_external_data
+2026-04-16 23:19:24,289 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'user_id': 'VIN1001', 'month': '2025-02'}
+2026-04-16 23:19:24,290 - agent - INFO - middleware.py:26 - [tool monitor]工具fetch_external_data调用成功
+2026-04-16 23:19:24,291 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有5条消息。
+2026-04-16 23:19:24,291 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | {'驾驶偏好': '舒适为主（常开大功率空调）', '百公里电耗': '17.7 kWh/100km', '电池健康度(SOH)': 'SOH当前为97.0%', '能耗击败率': '能耗处于全国平均水平'}
+2026-04-16 23:19:27,129 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 23:19:27,129 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '新能源汽车电池健康度97%保养建议'}
+2026-04-16 23:19:29,354 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 23:19:29,355 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有7条消息。
+2026-04-16 23:19:29,355 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 电池健康度97%属于正常范围，建议定期检查电池状态，避免长时间满充或亏电，保持合理充电习惯，按厂家要求进行常规保养。
+2026-04-16 23:19:31,858 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 23:19:31,858 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '新能源汽车百公里电耗17.7kWh优化建议'}
+2026-04-16 23:19:33,176 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 23:19:33,177 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有9条消息。
+2026-04-16 23:19:33,177 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 参考资料中未提供关于新能源汽车百公里电耗17.7kWh的具体优化建议。
+2026-04-16 23:19:35,853 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 23:19:35,854 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '新能源汽车空调使用对电耗影响及优化建议'}
+2026-04-16 23:19:41,152 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 23:19:41,153 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有11条消息。
+2026-04-16 23:19:41,153 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 新能源汽车空调使用会显著增加电耗，尤其在极端温度环境下。为优化能耗，建议合理设定空调温度（夏季24–26℃，冬季18–20℃），优先使用座椅加热或通风等局部调节功能，减少整车制冷/制热负荷；停车时尽量选择阴凉或保温区域，减少空调启动时的负荷；部分车型支持预约空调功能，可在充电时预调车内温度，避免行驶中高耗电运行。
+2026-04-16 23:20:30,433 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:20:30,433 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好
+2026-04-16 23:25:57,497 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:25:57,497 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好
+2026-04-16 23:28:13,858 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:28:13,859 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好
+2026-04-16 23:28:30,767 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:28:30,767 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+汽车坏了怎么办
+2026-04-16 23:28:32,478 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 23:28:32,478 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '新能源汽车故障应急处理与维修指南'}
+2026-04-16 23:28:35,980 - agent - INFO - middleware.py:26 - [tool monitor]工具rag_summarize调用成功
+2026-04-16 23:28:35,981 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有3条消息。
+2026-04-16 23:28:35,981 - agent - DEBUG - middleware.py:40 - [log_before_model]ToolMessage | 新能源汽车故障应急处理与维修指南需严格依据车辆制造商提供的官方手册执行，涉及高压系统操作时必须由具备资质的专业人员进行；用户在遇到故障时应首先确保安全，将车辆停靠至安全区域，开启危险报警闪光灯，并联系授权售后服务网点或专业救援机构，不得擅自拆卸或维修高压部件。
+2026-04-16 23:29:31,852 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\异常状态与故障排查.txt 内容加载成功
+2026-04-16 23:29:33,424 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\电池保养指南.txt 内容加载成功
+2026-04-16 23:30:09,292 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:30:09,292 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+汽车坏了怎么办
+2026-04-16 23:30:10,916 - agent - INFO - middleware.py:21 - [tool monitor]执行工具: rag_summarize
+2026-04-16 23:30:10,916 - agent - INFO - middleware.py:22 - [tool monitor]传入参数: {'query': '新能源汽车故障应急处理方法'}
+2026-04-16 23:30:11,151 - agent - ERROR - middleware.py:30 - 工具rag_summarize调用失败, 原因: Error executing plan: Internal error: Error creating hnsw segment reader: Nothing found on disk
+2026-04-16 23:30:48,637 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:30:48,637 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+汽车坏了怎么办
+2026-04-16 23:32:44,084 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\异常状态与故障排查.txt 内容加载成功
+2026-04-16 23:32:45,574 - agent - INFO - vector_store.py:99 - [加载知识库]D:\PythonProject\Rag\Agent项目\data\电池保养指南.txt 内容加载成功
+2026-04-16 23:33:24,078 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:33:24,078 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好
+2026-04-16 23:33:35,356 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:33:35,357 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好
+2026-04-16 23:34:22,687 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:34:22,687 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好
+2026-04-16 23:34:48,993 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-16 23:34:48,993 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你好

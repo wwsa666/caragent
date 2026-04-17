@@ -1,0 +1,12 @@
+# 忽略二进制文件
+*.exe
+*.dll
+*.so
+*.dylib
+*.asar
+
+/node_modules/
+
+.DS_Store
+Thumbs.db
+app.py
