@@ -579,3 +579,118 @@ body {
     60% { content: ".."; }
     80%, 100% { content: "..."; }
 }
+
+/* ========== Report Trigger Button ========== */
+.report-trigger-btn {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.15), rgba(58, 123, 213, 0.15));
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    color: var(--accent-primary);
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.report-trigger-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.25), rgba(58, 123, 213, 0.25));
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+    transform: translateY(-1px);
+}
+
+/* ========== Report Inline Options (in chat bubble) ========== */
+.report-options-container {
+    margin-top: 16px;
+}
+.report-section-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    margin-top: 16px;
+}
+.report-section-title:first-child {
+    margin-top: 0;
+}
+
+.report-option-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.report-option-card {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+.report-option-card:hover {
+    background: rgba(0, 210, 255, 0.08);
+    border-color: rgba(0, 210, 255, 0.3);
+    color: var(--text-primary);
+}
+.report-option-card.selected {
+    background: rgba(0, 210, 255, 0.15);
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+    font-weight: 600;
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.12);
+}
+
+.report-month-select {
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.report-month-select option {
+    background: #0f111a;
+    color: var(--text-primary);
+}
+
+.report-confirm-btn {
+    margin-top: 16px;
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+.report-confirm-btn:hover {
+    box-shadow: 0 4px 16px rgba(0, 210, 255, 0.35);
+    transform: translateY(-1px);
+}
+.report-confirm-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}

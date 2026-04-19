@@ -53,7 +53,7 @@ def generate_external_data():
         with open(external_data_path, "r", encoding="utf-8") as f:
             for line in f.readlines()[1:]:
                 arr: list[str] = line.strip().split(",")
-                if len(arr) < 6: continue
+                if len(arr) < 8: continue
 
                 user_id: str = arr[0].replace('"', "")
                 feature: str = arr[1].replace('"', "")
@@ -61,6 +61,8 @@ def generate_external_data():
                 consumables: str = arr[3].replace('"', "")
                 comparison: str = arr[4].replace('"', "")
                 time: str = arr[5].replace('"', "")
+                driving_hours: str = arr[6].replace('"', "")
+                driving_distance: str = arr[7].replace('"', "")
 
                 if user_id not in external_data:
                     external_data[user_id] = {}
@@ -70,6 +72,8 @@ def generate_external_data():
                     "百公里电耗": efficiency,
                     "电池健康度(SOH)": consumables,
                     "能耗击败率": comparison,
+                    "月度驾驶时长(小时)": driving_hours,
+                    "月度行驶里程(km)": driving_distance,
                 }
 
 

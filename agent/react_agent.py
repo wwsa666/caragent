@@ -27,6 +27,9 @@ class ReactAgent:
         for chunk in self.agent.stream(input_dict, stream_mode="values", context={"report": False}):
             latest_message = chunk["messages"][-1]
             if latest_message.type == "ai" and latest_message.content:
+                # 屏蔽中间调用工具时的“碎碎念”思考过程，只输出最后没有tool_calls的最终回答
+                if hasattr(latest_message, "tool_calls") and len(latest_message.tool_calls) > 0:
+                    continue
                 yield latest_message.content.strip() + "\n"
 
 
