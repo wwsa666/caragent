@@ -60,40 +60,81 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ========== New Chat ==========
+    // ========== New Chat (localStorage 持久化) ==========
     const newChatBtn = document.getElementById('new-chat-btn');
     const chatHistoryList = document.getElementById('chat-history-list');
-    const chatSessions = {};
-    let currentSessionId = 'session-' + Date.now();
     let initialWelcomeHTML = chatContainer.innerHTML;
-    
+
+    // 从 localStorage 恢复数据
+    const chatSessions = JSON.parse(localStorage.getItem('ev_chat_sessions') || '{}');
+    let currentSessionId = localStorage.getItem('ev_current_session') || 'session-' + Date.now();
+    const sessionOrder = JSON.parse(localStorage.getItem('ev_session_order') || '[]');
+
+    function saveSessions() {
+        localStorage.setItem('ev_chat_sessions', JSON.stringify(chatSessions));
+        localStorage.setItem('ev_current_session', currentSessionId);
+        localStorage.setItem('ev_session_order', JSON.stringify(sessionOrder));
+    }
+
+    // 页面加载时恢复当前会话内容
+    if (chatSessions[currentSessionId]) {
+        chatContainer.innerHTML = chatSessions[currentSessionId];
+        scrollToBottom();
+    }
+
+    // 页面加载时恢复侧边栏历史列表
+    function createHistoryItem(sid, title) {
+        const li = document.createElement('li');
+        li.className = 'history-item';
+        li.textContent = title;
+        li.setAttribute('data-id', sid);
+        if (sid === currentSessionId) li.classList.add('active');
+        li.addEventListener('click', function() {
+            // 先保存当前会话
+            chatSessions[currentSessionId] = chatContainer.innerHTML;
+            // 切换
+            const targetSid = this.getAttribute('data-id');
+            if (chatSessions[targetSid]) {
+                currentSessionId = targetSid;
+                chatContainer.innerHTML = chatSessions[targetSid];
+                scrollToBottom();
+                // 更新侧边栏高亮
+                document.querySelectorAll('#chat-history-list .history-item').forEach(el => el.classList.remove('active'));
+                this.classList.add('active');
+                saveSessions();
+            }
+        });
+        return li;
+    }
+
+    // 恢复侧边栏
+    sessionOrder.forEach(item => {
+        chatHistoryList.appendChild(createHistoryItem(item.id, item.title));
+    });
+
+    // 监听聊天内容变化，自动存盘
     const observer = new MutationObserver(() => {
         chatSessions[currentSessionId] = chatContainer.innerHTML;
+        saveSessions();
     });
     observer.observe(chatContainer, { childList: true, subtree: true });
     
     if (newChatBtn) {
         newChatBtn.addEventListener('click', () => {
+            // 保存当前会话到侧边栏（如果有用户消息且未保存过）
             const userMessages = chatContainer.querySelectorAll('.user-message p');
-            if (userMessages.length > 0 && !document.querySelector(`li[data-id="${currentSessionId}"]`)) {
-                const title = userMessages[0].textContent.trim();
-                const li = document.createElement('li');
-                li.className = 'history-item';
-                li.textContent = title;
-                li.setAttribute('data-id', currentSessionId);
-                li.addEventListener('click', function() {
-                    const sid = this.getAttribute('data-id');
-                    if (chatSessions[sid]) {
-                        currentSessionId = sid;
-                        chatContainer.innerHTML = chatSessions[sid];
-                        scrollToBottom();
-                    }
-                });
-                chatHistoryList.insertBefore(li, chatHistoryList.firstChild);
+            if (userMessages.length > 0 && !sessionOrder.find(s => s.id === currentSessionId)) {
+                const title = userMessages[0].textContent.trim().substring(0, 30);
+                sessionOrder.unshift({ id: currentSessionId, title: title });
+                chatHistoryList.insertBefore(createHistoryItem(currentSessionId, title), chatHistoryList.firstChild);
             }
+            // 创建新会话
             currentSessionId = 'session-' + Date.now();
             chatContainer.innerHTML = initialWelcomeHTML;
             chatSessions[currentSessionId] = initialWelcomeHTML;
+            // 移除所有高亮
+            document.querySelectorAll('#chat-history-list .history-item').forEach(el => el.classList.remove('active'));
+            saveSessions();
             chatInput.value = '';
             chatInput.style.height = 'auto';
             chatInput.focus();
@@ -117,15 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
         chatInput.value = '';
         chatInput.style.height = 'auto';
 
-        // 检测报告意图：如果用户输入包含"报告"相关关键词，走 LangGraph 流程
-        const reportKeywords = ['报告', '报表', '月报', '总结报告', '车况报告', '运行报告'];
-        const isReportIntent = reportKeywords.some(kw => query.includes(kw));
-
-        if (isReportIntent) {
-            await startReportFlow();
-        } else {
-            await normalChat(query);
-        }
+        // 所有对话统一走后端 Supervisor 路由，不再在前端做意图拦截
+        await normalChat(query);
     }
 
     // ========== 普通对话 ==========
@@ -140,11 +174,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const contentDiv = document.querySelector(`#${msgId} .markdown-body`);
 
         try {
-            const contextualQuery = `（系统信息：当前用户的车架号/VIN已切换为${currentVIN}）\n${query}`;
             const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query: contextualQuery })
+                body: JSON.stringify({ query: query, vin: currentVIN })
             });
 
             if (!response.ok) throw new Error('Network response was not ok');

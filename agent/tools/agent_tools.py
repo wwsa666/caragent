@@ -91,5 +91,37 @@ def fetch_external_data(user_id: str, month: str) -> str:
 def fill_context_for_report():
     return "fill_context_for_report已调用"
 
+
+# ==================== MCP-Style 工具注册 ====================
+
+def _register_tools():
+    """将所有工具按服务类别注册到 ToolRegistry（仅首次调用生效）"""
+    from agent.tools.tool_registry import tool_registry
+
+    if tool_registry._initialized:
+        return
+
+    # RAG 知识检索类
+    tool_registry.register("rag", rag_summarize)
+
+    # 天气与环境类
+    tool_registry.register("weather", get_weather)
+    tool_registry.register("weather", get_user_location)
+
+    # 用户/车辆信息类
+    tool_registry.register("user_info", get_user_id)
+    tool_registry.register("user_info", get_current_month)
+
+    # 业务数据查询类
+    tool_registry.register("data", fetch_external_data)
+    tool_registry.register("data", fill_context_for_report)
+
+    tool_registry._initialized = True
+
+
+# 模块加载时自动注册
+_register_tools()
+
+
 if __name__ == '__main__':
     print(rag_summarize("新能源车在零下5度应该怎么保养电池"))

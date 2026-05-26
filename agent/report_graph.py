@@ -1,13 +1,16 @@
 """
-LangGraph StateGraph 报告生成工作流（interrupt + MongoDB 存档版）
-================================================================
+LangGraph StateGraph 报告生成工作流（interrupt + MongoDB 存档版 + Review 审查）
+===========================================================================
 核心机制：
   - ask_user 节点调用 interrupt() 暂停执行，状态存入 MongoDB（存档退出）
   - 前端用户选择后，通过 Command(resume=answer) 从 MongoDB 读档恢复执行
   - 服务器全程无死等线程，支持跨请求、跨重启的状态持久化
+  - review_report 节点对报告做数据一致性审查，防止数字幻觉
 
 节点编排：
-  [ask_user] --interrupt()--> [fetch_data] --> [generate_report] --> END
+  [ask_user] --interrupt()--> [fetch_data] --> [generate_report] --> [review_report]
+      review_report ──PASS──> END
+      review_report ──FAIL──> generate_report（最多重试2次）
 """
 
 import uuid
@@ -18,6 +21,7 @@ from langgraph.types import interrupt, Command
 from model.factory import chat_model
 from agent.tools.agent_tools import generate_external_data, external_data
 from rag.rag_service import RagSummarizeService
+from utils.prompt_loader import load_review_prompts
 from utils.logger_handler import logger
 
 
@@ -30,6 +34,8 @@ class ReportState(TypedDict):
     raw_data: Optional[dict]            # 从 CSV 拉取的结构化数据
     report_text: str                    # LLM 最终生成的报告 Markdown
     error: Optional[str]               # 错误信息
+    review_passed: bool                 # 审查是否通过
+    review_count: int                   # 已审查次数（防止无限重试）
 
 
 # ==================== 2. 常量 ====================
@@ -191,7 +197,49 @@ def generate_report(state: ReportState) -> dict:
 """
 
     response = chat_model.invoke(prompt)
-    return {"report_text": response.content.strip()}
+    return {"report_text": response.content.strip(), "review_count": state.get("review_count", 0)}
+
+
+def review_report(state: ReportState) -> dict:
+    """
+    节点4（新增）: 审查 LLM 生成的报告，校验数据一致性。
+    
+    拿着 raw_data（真实数据）和 report_text（生成报告）调用 LLM 做比对：
+      - PASS → 审查通过，流程结束
+      - FAIL → 发现数据幻觉，打回重新生成（最多重试 2 次）
+    """
+    raw_data = state["raw_data"]
+    report_text = state["report_text"]
+    review_count = state.get("review_count", 0) + 1
+
+    logger.info(f"[ReportGraph] review_report: 第 {review_count} 次审查")
+
+    # 如果已经重试 2 次，强制通过（避免无限循环）
+    if review_count > 2:
+        logger.warning("[ReportGraph] review_report: 已达最大重试次数，强制通过")
+        return {"review_passed": True, "review_count": review_count}
+
+    try:
+        review_prompt_template = load_review_prompts()
+        review_prompt = review_prompt_template.replace(
+            "{raw_data}", str(raw_data)
+        ).replace(
+            "{report_text}", report_text
+        )
+
+        response = chat_model.invoke(review_prompt)
+        result = response.content.strip()
+
+        if result.upper().startswith("PASS"):
+            logger.info("[ReportGraph] review_report: ✅ 审查通过")
+            return {"review_passed": True, "review_count": review_count}
+        else:
+            logger.warning(f"[ReportGraph] review_report: ❌ 审查未通过 -> {result[:200]}")
+            return {"review_passed": False, "review_count": review_count}
+
+    except Exception as e:
+        logger.error(f"[ReportGraph] review_report 异常: {e}，默认通过")
+        return {"review_passed": True, "review_count": review_count}
 
 
 # ==================== 4. 路由函数 ====================
@@ -200,6 +248,13 @@ def should_continue(state: ReportState) -> str:
     if state.get("error"):
         return "error_end"
     return "continue"
+
+
+def should_regenerate(state: ReportState) -> str:
+    """审查后的路由：通过则结束，未通过则回到 generate_report 重新生成"""
+    if state.get("review_passed", True):
+        return "approved"
+    return "regenerate"
 
 
 # ==================== 5. 构建 StateGraph ====================
@@ -212,6 +267,7 @@ def build_report_graph():
     workflow.add_node("ask_user", ask_user)
     workflow.add_node("fetch_data", fetch_data)
     workflow.add_node("generate_report", generate_report)
+    workflow.add_node("review_report", review_report)
 
     # 编排边
     workflow.add_edge(START, "ask_user")
@@ -220,7 +276,11 @@ def build_report_graph():
         "continue": "generate_report",
         "error_end": END,
     })
-    workflow.add_edge("generate_report", END)
+    workflow.add_edge("generate_report", "review_report")
+    workflow.add_conditional_edges("review_report", should_regenerate, {
+        "approved": END,
+        "regenerate": "generate_report",
+    })
 
     # 使用 MongoDB 做 checkpoint 持久化
     # serverSelectionTimeoutMS 缩短为 5 秒，避免 MongoDB 未启动时长时间阻塞
@@ -261,6 +321,8 @@ class ReportGraph:
             "raw_data": None,
             "report_text": "",
             "error": None,
+            "review_passed": False,
+            "review_count": 0,
         }
         config = {"configurable": {"thread_id": thread_id}}
 

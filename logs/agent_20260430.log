@@ -1,0 +1,9 @@
+2026-04-30 22:27:00,731 - agent - INFO - middleware.py:38 - [log_before_model]即将调用模型, 带有1条消息。
+2026-04-30 22:27:00,734 - agent - DEBUG - middleware.py:40 - [log_before_model]HumanMessage | （系统信息：当前用户的车架号/VIN已切换为VIN1001）
+你是谁
+2026-04-30 22:27:09,661 - agent - INFO - report_graph.py:68 - [ReportGraph] ask_user: 等待用户选择报告配置 (VIN=VIN1001)
+2026-04-30 22:27:22,768 - agent - INFO - report_graph.py:68 - [ReportGraph] ask_user: 等待用户选择报告配置 (VIN=VIN1001)
+2026-04-30 22:27:24,738 - agent - INFO - report_graph.py:68 - [ReportGraph] ask_user: 等待用户选择报告配置 (VIN=VIN1001)
+2026-04-30 22:27:24,738 - agent - INFO - report_graph.py:92 - [ReportGraph] ask_user: 用户已回答 -> {'time_range': 'single_month', 'month': '2025-02', 'dimensions': ['driving_habit', 'energy', 'battery']}
+2026-04-30 22:27:24,739 - agent - INFO - report_graph.py:104 - [ReportGraph] fetch_data: vin=VIN1001, time_range=single_month, dims=['driving_habit', 'energy', 'battery']
+2026-04-30 22:27:24,741 - agent - INFO - report_graph.py:152 - [ReportGraph] generate_report: 为 VIN1001 生成报告

@@ -1,0 +1,15 @@
+2026-05-15 18:21:44,147 - agent - INFO - tool_registry.py:48 - [ToolRegistry] 注册工具: rag_summarize -> 类别: rag
+2026-05-15 18:21:44,147 - agent - INFO - tool_registry.py:48 - [ToolRegistry] 注册工具: get_weather -> 类别: weather
+2026-05-15 18:21:44,147 - agent - INFO - tool_registry.py:48 - [ToolRegistry] 注册工具: get_user_location -> 类别: weather
+2026-05-15 18:21:44,147 - agent - INFO - tool_registry.py:48 - [ToolRegistry] 注册工具: get_user_id -> 类别: user_info
+2026-05-15 18:21:44,147 - agent - INFO - tool_registry.py:48 - [ToolRegistry] 注册工具: get_current_month -> 类别: user_info
+2026-05-15 18:21:44,147 - agent - INFO - tool_registry.py:48 - [ToolRegistry] 注册工具: fetch_external_data -> 类别: data
+2026-05-15 18:21:44,147 - agent - INFO - tool_registry.py:48 - [ToolRegistry] 注册工具: fill_context_for_report -> 类别: data
+2026-05-15 18:22:04,638 - agent - INFO - memory_service.py:45 - [UserMemoryService] 初始化成功
+2026-05-15 18:22:04,638 - agent - INFO - supervisor.py:30 - [Supervisor] 初始化完成（意图路由器 + 记忆服务）
+2026-05-15 18:22:19,003 - agent - INFO - intent_router.py:52 - [IntentRouter] query='帮我生成一份2月的运行报告...' → intent=report
+2026-05-15 18:22:19,350 - agent - INFO - intent_router.py:52 - [IntentRouter] query='仪表盘上红色电池灯亮了...' → intent=diagnose
+2026-05-15 18:22:19,678 - agent - INFO - intent_router.py:52 - [IntentRouter] query='新能源车在零下10度怎么保养电池...' → intent=chat
+2026-05-15 18:22:19,978 - agent - INFO - intent_router.py:52 - [IntentRouter] query='今天天气怎么样...' → intent=chat
+2026-05-15 18:22:20,315 - agent - INFO - intent_router.py:52 - [IntentRouter] query='车子启动时有异响抖动很厉害...' → intent=diagnose
+2026-05-15 18:22:20,766 - agent - INFO - intent_router.py:52 - [IntentRouter] query='帮我查月报...' → intent=report
